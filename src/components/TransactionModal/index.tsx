@@ -7,8 +7,6 @@ import outcomeImg from "../../assets/outcome.svg";
 
 import { TransactionsContext } from "../../context/TransactionContext";
 
-import { api } from "../../services/api";
-
 import { Container, RadioBox, TransactionTypeContainer } from "./styles";
 
 import { transactionType, transactionModalProps } from "./types";
@@ -24,15 +22,22 @@ export function TransactionModal({
   const [category, setCategory] = useState("");
   const [type, setType] = useState<transactionType>("deposit");
 
-  function handleCreateNewTransaction(event: FormEvent) {
+  async function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault();
 
-    createTransaction({
+    await createTransaction({
       title,
       amount,
       category,
       type,
     });
+
+    setTitle("");
+    setAmount(0);
+    setCategory("");
+    setType("deposit");
+
+    onRequestClose();
   }
 
   return (

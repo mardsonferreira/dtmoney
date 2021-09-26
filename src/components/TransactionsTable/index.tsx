@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { TransactionsContext } from "../../context/TransactionContext";
 
 import { Container } from "./styles";
