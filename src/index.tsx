@@ -14,17 +14,17 @@ createServer({
       transactions: [
         {
           id: 1,
-          title: 'Freelance de website',
+          title: 'Website creation',
           type: 'deposit',
-          category: 'Dev',
+          category: 'Development',
           amount: 6000,
           createdAt: new Date('2021-09-24 09:00:00'),
         },
         {
           id: 2,
-          title: 'Aluguel',
+          title: 'Supermarket',
           type: 'withdraw',
-          category: 'Moradia',
+          category: 'Food',
           amount: 2000,
           createdAt: new Date('2021-09-25 09:00:00'),
         }

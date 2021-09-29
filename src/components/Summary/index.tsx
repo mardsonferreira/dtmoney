@@ -49,7 +49,6 @@ export function Summary() {
           <img src={outcomeImg} alt="Outcome" />
         </header>
         <strong>
-          -
           {new Intl.NumberFormat("en-US", {
             style: "currency",
             currency: "USD",
